@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <div ng-app="App" ng-controller="AppController as ctrl">
+        <button ng-click="ctrl.generate()">Generate</button>
+        <div id="table">
+            <table>
+                <tr ng-repeat="row in ctrl.rows">
+                    <td ng-repeat="el in row">
+                        {{el}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
